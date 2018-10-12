@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <VersionPrefix>2018.3.0</VersionPrefix>
+    <VersionSuffix>alpha</VersionSuffix>
+    <Company>Roser ICT</Company>
+    <Copyright>Copyright © 2018 Roser ICT</Copyright>
+    <Authors />
+  </PropertyGroup>
+</Project>

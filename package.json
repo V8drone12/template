@@ -1,0 +1,29 @@
+{
+  "name": "generator-rosermicroservice",
+  "version": "0.0.1",
+  "description": "Roser yeoman generator for .NET Core 2.x Microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install && npm link",
+    "service": "yo rosermicroservice"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "netcore",
+    "microservice"
+  ],
+  "author": "Sorin Pavel",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "yeoman-generator": "^3.1.1",
+    "yosay": "^2.0.2"
+  },
+  "files": [
+    "app"
+  ],
+  "devDependencies": {
+    "replace": "^1.0.0"
+  }
+}

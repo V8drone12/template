@@ -1,0 +1,24 @@
+<Project>
+  <PropertyGroup>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU</Platforms>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsUnitTestProject)' != 'true' and '$(IsIntegrationTestProject)' != 'true'">
+    <OutputPath Condition="'$(Configuration)' == 'Release'">..\..\artifacts\build\</OutputPath>
+    <OutputPath Condition="'$(Configuration)' != 'Release'"></OutputPath>
+    <PublishDir Condition="'$(Configuration)' == 'Release'">..\..\artifacts\pub\</PublishDir>
+    <PublishDir Condition="'$(Configuration)' != 'Release'"></PublishDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsUnitTestProject)' == 'true'">
+    <OutputPath Condition="'$(Configuration)' == 'Release'">..\..\artifacts\test\</OutputPath>
+    <OutputPath Condition="'$(Configuration)' != 'Release'"></OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(IsIntegrationTestProject)' == 'true'">
+    <OutputPath Condition="'$(Configuration)' == 'Release'">..\..\artifacts\integrationtest\</OutputPath>
+    <OutputPath Condition="'$(Configuration)' != 'Release'"></OutputPath>
+  </PropertyGroup>
+</Project>
